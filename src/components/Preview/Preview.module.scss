@@ -1,0 +1,38 @@
+.preview {
+  position: relative;
+  margin-top: 50px;
+  background: rgba(49, 122, 232, 1);
+  box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blockText {
+  position: relative;
+  z-index: 999;
+  color: white;
+  font-weight: 700;
+  margin: 0 0 0 20px;
+  .text {
+    margin: 70px 0 10px 0;
+    font-size: 32px;
+  }
+  .name {
+    margin: 0 0 10px 0;
+    font-weight: 800;
+    font-size: 40px;
+  }
+  .price {
+    font-size: 36px;
+
+    margin: 0 0 20px 0;
+  }
+}
+.img {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
