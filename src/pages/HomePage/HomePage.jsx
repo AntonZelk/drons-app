@@ -1,24 +1,11 @@
-import { useCallback, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { requestDrons } from '../../actions/dronsActions';
 import Header from '../../components/Header/Header';
 import Preview from '../../components/Preview/Preview';
-
-import classes from './HomePage.module.scss';
 import Gallery from '../../components/Gallery/Gallery';
 import Footer from '../../components/Footer/Footer';
 
+import classes from './HomePage.module.scss';
+
 const HomePage = () => {
-  const dispatch = useDispatch();
-
-  const requestItemsHandler = useCallback(() => {
-    dispatch(requestDrons());
-  }, [dispatch]);
-
-  useEffect(() => {
-    requestItemsHandler();
-  }, [requestItemsHandler]);
-
   return (
     <div className={classes.container}>
       <Header />

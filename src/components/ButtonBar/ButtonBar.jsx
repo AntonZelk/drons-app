@@ -1,4 +1,5 @@
 import React from 'react';
+
 import BarBtn from '../UI/BarBtn/BarBtn';
 
 import classes from './ButtonBar.module.scss';

@@ -5,6 +5,9 @@ import {
   HIDE_LOADER,
   SHOW_ERROR,
   ADD_PREVIEW,
+  CHANGE_DRONS,
+  SET_CURRENT_DRON,
+  CHANGE_MODAL,
 } from './types';
 
 export const requestDrons = () => {
@@ -31,6 +34,59 @@ export const addPreview = (arr) => {
   return {
     type: ADD_PREVIEW,
     payload: previewObj,
+  };
+};
+
+export const changeDrons = (payload, name) => {
+  let selectedDrons = {};
+
+  if (name === 'All' || name === undefined) {
+    selectedDrons = {
+      drons: payload,
+      selectedBtn: 'All',
+    };
+  }
+  if (name === 'Cheap') {
+    selectedDrons = {
+      drons: [
+        payload.reduce((prev, curr) => (prev.price < curr.price ? prev : curr)),
+      ],
+      selectedBtn: name,
+    };
+  }
+  if (name === 'Best') {
+    selectedDrons = {
+      drons: payload.filter((dron) => dron.rating > 4),
+      selectedBtn: name,
+    };
+  }
+  if (name === 'Fast') {
+    selectedDrons = {
+      drons: [
+        payload.reduce((prev, curr) => (prev.speed > curr.speed ? prev : curr)),
+      ],
+      selectedBtn: name,
+    };
+  }
+  return {
+    type: CHANGE_DRONS,
+    payload: selectedDrons,
+  };
+};
+
+export const setCurrentDron = (drons, id) => {
+  const arr = drons.filter((dron) => dron.id === +id);
+
+  return {
+    type: SET_CURRENT_DRON,
+    payload: arr[0],
+  };
+};
+
+export const changeModal = (payload) => {
+  return {
+    type: CHANGE_MODAL,
+    payload,
   };
 };
 

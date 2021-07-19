@@ -11,3 +11,8 @@
     cursor: pointer;
   }
 }
+.active {
+  svg path {
+    stroke: #317ae8;
+  }
+}

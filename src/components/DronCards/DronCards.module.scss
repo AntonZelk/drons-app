@@ -1,7 +1,8 @@
 .dronCards {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
   flex: 1 0 auto;
+  align-items: center;
 }

@@ -1,0 +1,111 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+.main {
+  width: 100%;
+  max-width: 700px;
+  padding: 0 2.5%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.back {
+  margin: 50px 0 0 0;
+  cursor: pointer;
+}
+.img {
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+.description {
+  margin: 24px 0 0 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1f1f1f;
+}
+.name {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 36px;
+  color: #1f1f1f;
+}
+.price {
+  margin: 10px 0 0 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #317ae8;
+}
+.text {
+  margin: 12px 0 0 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #939399;
+}
+.inpName {
+  margin: 36px 0 24px 0;
+}
+
+input {
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1f1f1f;
+  height: 34px;
+  &::placeholder {
+    font-size: 16px;
+    line-height: 22px;
+    color: #939399;
+  }
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+  height: 46px;
+  background: #317ae8;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 28px 0 40px 0;
+}
+@media (min-width: 824px) {
+  .container {
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 0 16px;
+  }
+  .back {
+    margin: 50px 0 0 30px;
+    cursor: pointer;
+  }
+  .price {
+    margin: 8px 0 0 0;
+  }
+}
+@media (max-width: 321px) {
+  .img {
+    width: 300px;
+    img {
+      width: 300px;
+    }
+  }
+}
+@media (max-width: 282px) {
+  .img {
+    width: 260px;
+    img {
+      width: 260px;
+    }
+  }
+}

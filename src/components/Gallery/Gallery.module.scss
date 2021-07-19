@@ -1,7 +1,16 @@
 .gallery {
   display: flex;
+  position: relative;
   flex-direction: column;
+  flex: 1 0;
 }
 .title {
   margin: 30px 0 0 0;
+}
+@media (max-width: 600px) {
+  .title {
+    margin: 28px 0 0 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

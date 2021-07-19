@@ -1,14 +1,28 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
+import CartSvg from '../UI/CartSvg/CartSvg';
+import FavouriteSvg from '../UI/FavouriteSvg/FavouriteSvg';
+import FindSvg from '../UI/FindSvg/FindSvg';
+import HomeSvg from '../UI/HomeSvg/HomeSvg';
 
 import classes from './Footer.module.scss';
 
 const Footer = () => {
   return (
     <footer className={classes.footer}>
-      <img src="/img/home.png" alt="home" color="rgba(147, 147, 153, 1)" />
-      <img src="/img/favourite.png" alt="favourite" />
-      <img src="/img/find.png" alt="find" />
-      <img src="/img/cart.png" alt="cart" />
+      <NavLink exact to="/" activeClassName={classes.active}>
+        <HomeSvg color="#939399" />
+      </NavLink>
+      <NavLink exact to="/favourite" activeClassName={classes.active}>
+        <FavouriteSvg color="#939399" />
+      </NavLink>
+      <NavLink exact to="/find" activeClassName={classes.active}>
+        <FindSvg color="#939399" />
+      </NavLink>
+      <NavLink exact to="/cart" activeClassName={classes.active}>
+        <CartSvg color="#939399" />
+      </NavLink>
     </footer>
   );
 };

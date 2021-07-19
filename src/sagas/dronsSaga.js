@@ -1,10 +1,11 @@
-import { call, put, takeEvery } from 'redux-saga/effects';
+import { call, put, takeEvery, select } from 'redux-saga/effects';
 
 import {
   hideLoader,
   showLoader,
   showError,
   fetchDrons,
+  changeDrons,
   addPreview,
 } from '../actions/dronsActions';
 import { REQUEST_DRONS } from '../actions/types';
@@ -19,6 +20,8 @@ function* sagaDronsWorker() {
     yield put(showLoader());
     const payload = yield call(fetchDronsDB);
     yield put(fetchDrons(payload.data));
+    const drons = yield select((state) => state.drons.drons);
+    yield put(changeDrons(drons));
     yield put(addPreview(payload.data));
     yield put(hideLoader());
   } catch (e) {

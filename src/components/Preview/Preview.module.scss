@@ -36,3 +36,25 @@
   right: 0;
   z-index: 1;
 }
+@media (max-width: 600px) {
+  .preview {
+    margin-top: 32px;
+  }
+  .blockText {
+    .text {
+      margin: 71px 0 0 0;
+      font-size: 14px;
+    }
+    .name {
+      font-size: 24px;
+      line-height: 32px;
+      margin: 0;
+    }
+    .price {
+      font-size: 20px;
+      line-height: 24px;
+
+      margin: 0 0 20px 0;
+    }
+  }
+}

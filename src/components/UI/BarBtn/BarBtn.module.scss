@@ -1,13 +1,11 @@
-span {
+.text {
   font-size: 24px;
   line-height: 22px;
   color: rgba(31, 31, 31, 1);
 }
 .barBtn {
   width: 140px;
-
   border: 1px solid rgba(231, 231, 231, 1);
-
   box-sizing: border-box;
   border-radius: 12px;
   text-align: center;
@@ -15,8 +13,29 @@ span {
   cursor: pointer;
   &:hover {
     background: #317ae8;
-    span {
+    .text {
       color: rgba(255, 255, 255, 1);
     }
+  }
+}
+
+.activeBtn {
+  background: #317ae8;
+  .text {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+@media (max-width: 600px) {
+  .barBtn {
+    width: 78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 46px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 22px;
   }
 }

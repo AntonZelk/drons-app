@@ -8,6 +8,10 @@
   box-sizing: border-box;
   border-radius: 12px;
   cursor: pointer;
+  margin: 10px 0 0 0;
+  &:hover {
+    border: 1px solid #317ae8;
+  }
 }
 
 .name {
